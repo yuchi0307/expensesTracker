@@ -7,7 +7,7 @@ import './Card.css'
 // 6. 為避免我客製化的 Card html tag 只讀得懂我給予他的css內容，他忘記去讀本身在ExpensesItem.js中的className='expense-item'
     //必須多提醒他：const classes = 'card ' （我客製化的css className）+ props.className（原應有的）;
     //注意！ 'card '結尾必須有空格否則無效
-function Card(props){
+const Card = (props) => {
     const classes = 'card ' + props.className;
     return(
     <div className={classes}>{props.children}</div>
