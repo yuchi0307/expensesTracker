@@ -17,6 +17,8 @@ const ExpenseForm = () => {
     setUserInput({
       ...userInput,
       enteredTitle: event.target.value
+      //在 react 中，這個 state 被更新了，若沒有顧及其他兩個物件，新的 state 將不會保留就有的其他物件
+      //所以將更新 state 時，用...userInput先保留所有物件，再 override title，以此類推
     });
   };
 
