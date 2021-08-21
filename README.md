@@ -7,6 +7,7 @@
      例如，在比較舊的 react 專案中會有 import React from 'react'，是因為 JSX 被視為 React method 如下
      某個component = () => { return React.createElement(){ 'html element' , { attribute } , contents between closing element } }
      這也是為什麼我們只能在每個 component 中 return 一個 div 的原因，因為我們不能 return more than one thing
+<img width="693" alt="截圖 2021-08-21 下午10 41 14" src="https://user-images.githubusercontent.com/67968321/130325861-ef3c630c-3802-4439-8419-071561dd30b5.png">
 
 3.  當變數有初始值，又給予其他新的值，並不會使 React 改變UI，唯有 useState()，他會將值放在 React 某處（我們看不見的地方）並重新 render。 
 
