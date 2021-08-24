@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState(''); //一開始欄位都是空白，所以給空字串
   const [enteredAmount, setEnteredAmount] = useState(''); //即便輸入的看似是數字，但型態依舊是字串
   const [enteredDate, setEnteredDate] = useState('');
@@ -49,11 +49,12 @@ const ExpenseForm = () => {
       date: new Date(enteredDate) ////輸入的日期是字串，把它轉成date物件
     };
 
-    console.log(expenseData);
+    props.onSaveExpenseData(expenseData);
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
     //按下送出表單後清空欄位
+    
   };
 
   return (
