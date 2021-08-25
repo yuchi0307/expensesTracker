@@ -1,6 +1,6 @@
 # expensesTracker
 【 React Expenses Tracker 練習筆記 】
-
+✔ component
 1.  Component is just function、是客製化的 html 標籤，可用 <></> 表示。（opening and closing tag）
 
 2.  JSX ： 瀏覽器最終能讀懂的終究是 html, css,  vanilla js ，JSX 為 React 環境讓我們寫方便閱讀的語法糖。（這些神奇魔法仰賴 package.json file裡面諸多 dependencies）
@@ -11,4 +11,8 @@
 
 3.  當變數有初始值，又給予其他新的值，並不會使 React 改變UI，唯有 useState()，他會將值放在 React 某處（我們看不見的地方）並重新 render。 
 
-
+✔ React State & Working with
+Events
+1. 子傳父值： pass a function from a paerent component to a child component and then call that function inside of the child component。
+-> 當 function 在子層被呼叫，把資料data當作參數放入function
+-> 因為父層把 function 當作 <子層 /> 的 prop 傳上來
