@@ -6,7 +6,6 @@ import ExpensesDate from './ExpensesDate.js';
 
 const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.title);
-  console.log('看看state的運作和出現次數')
 
   const clickHandler = () =>{
     setTitle('狗狗');
