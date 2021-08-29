@@ -41,12 +41,12 @@ const ExpenseForm = (props) => {
   };
 
   const submitHandler = (event) => {
-    event.preventDefault(); ////和發送 request 有關的js
+    event.preventDefault(); //和發送 request 有關的js
     
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: new Date(enteredDate) ////輸入的日期是字串，把它轉成date物件
+      date: new Date(enteredDate), //輸入的日期是字串，把它轉成date物件
     };
 
     props.onSaveExpenseData(expenseData);
@@ -56,6 +56,10 @@ const ExpenseForm = (props) => {
     //按下送出表單後清空欄位
     
   };
+
+  const cancel = (prop) =>{
+    props.onCancel()
+  }
 
   return (
     <form onSubmit={submitHandler}>
@@ -88,6 +92,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
+        <button type='button' onClick={cancel}>Cancel</button> 
         <button type='submit'>Add Expense</button>
       </div>
     </form>
