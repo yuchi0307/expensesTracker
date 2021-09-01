@@ -45,7 +45,7 @@ const ExpenseForm = (props) => {
     
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate), //輸入的日期是字串，把它轉成date物件
     };
 
